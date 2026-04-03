@@ -1,44 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Css grid project</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life Operator AI — Your AI Operating System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-</head>
-<body>
-    <div id="main">
-        <div id="left-top-left">
-            <div class="square"></div>
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-nav landing-nav">
+      <div class="brand" data-nav="landing">
+        <span class="brand-dot"></span>
+        <div>
+          <h1>Life Operator AI</h1>
+          <p>AI productivity OS</p>
         </div>
-        <div id="left-top-right">
-            <h3>Menu</h3>
-            <h5>Home Page</h5>
-            <h5>Portfolio</h5>
-            <h5>Fasion Week --&copy 2021;</h5>
-            <h5>News/ Articles</h5>
-            <h5>Contact</h5>
-        </div>
-        <div id="left-center">
-            <h1>Select</h1>
-            <h1>fASHION</h1>
-            <h1>Mod.05 --</h1>
-            <h1>Scene</h1>
-        </div>
-        <div id="left-bottom">
-            <p>Our modern online platform with a collection <br>of interesting inspirations and fasion <br>photos from all over he world</p>
-        </div>
-        <div id="right">
-            <video muted autoplay loop src="https://videos.pexels.com/video-files/3126361/3126361-uhd_2560_1440_25fps.mp4"></video>
-        </div>
+      </div>
+      <div class="top-actions">
+        <button class="ghost" data-nav="pricing">Pricing</button>
+        <button class="ghost" data-nav="signin">Sign in</button>
+        <button class="gradient" data-nav="dashboard">Start Free</button>
+      </div>
+    </header>
 
-        <div id="arrow">
-            <i class="ri-arrow-right-line"></i>
+    <main>
+      <section id="landing" class="page active">
+        <section class="hero glass">
+          <div>
+            <p class="pill">Built for students, founders, and deep workers</p>
+            <h2>
+              Turn ideas into action with your
+              <span class="gradient-text">AI operating system.</span>
+            </h2>
+            <p class="muted">
+              Study, plan, organize, and execute — all in one premium workspace.
+              Life Operator AI transforms messy thoughts into tasks, summaries,
+              notes, and deliverables in seconds.
+            </p>
+            <div class="cta-row">
+              <button class="gradient" data-nav="signup">Get Started</button>
+              <button class="ghost" data-nav="dashboard">Watch Demo</button>
+            </div>
+          </div>
+          <div class="hero-mockup card">
+            <div class="mockup-nav">
+              <span></span><span></span><span></span>
+              <small>Live Dashboard Preview</small>
+            </div>
+            <div class="mockup-grid">
+              <article class="mini-card">
+                <h4>AI Productivity Score</h4>
+                <strong>92</strong>
+                <p>+14 this week</p>
+              </article>
+              <article class="mini-card">
+                <h4>Study Streak</h4>
+                <strong>16 days</strong>
+                <p>Exam prep in progress</p>
+              </article>
+              <article class="mini-card wide">
+                <h4>Recommended Action</h4>
+                <p>
+                  Summarize Chapter 4 PDF and convert into flashcards + daily
+                  review checklist.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="trust-row card">
+          <span>Trusted by ambitious teams and learners at</span>
+          <strong>Arcadia Labs</strong>
+          <strong>Northwind</strong>
+          <strong>Vertex Academy</strong>
+          <strong>Moonlane Studio</strong>
+        </section>
+
+        <section class="three-col">
+          <article class="card"><h3>Think</h3><p>Capture messy thoughts and voice notes instantly.</p></article>
+          <article class="card"><h3>Transform</h3><p>Convert content into plans, notes, tasks, and timelines.</p></article>
+          <article class="card"><h3>Execute</h3><p>Track progress across projects, studies, and deadlines.</p></article>
+        </section>
+
+        <section class="faq card">
+          <h3>FAQ</h3>
+          <details open><summary>Can I use this for study workflows?</summary><p>Yes, including study plans, flashcards, quizzes, revision cycles, and exam countdowns.</p></details>
+          <details><summary>Can I upload files?</summary><p>Upload PDFs, docs, and images to generate summaries, notes, and Q&A outputs.</p></details>
+          <details><summary>Does it work on mobile?</summary><p>Fully responsive with mobile drawer navigation and touch-first controls.</p></details>
+        </section>
+      </section>
+
+      <section id="auth" class="page auth-wrap">
+        <div class="auth-grid">
+          <article class="card auth-card" data-auth="signin">
+            <h3>Welcome back</h3>
+            <p class="muted">Sign in to continue operating at your peak.</p>
+            <input placeholder="Email" />
+            <input placeholder="Password" type="password" />
+            <button class="gradient" data-nav="dashboard">Sign In</button>
+            <button class="link" data-auth-target="forgot">Forgot password?</button>
+          </article>
+          <article class="card auth-card hidden" data-auth="signup">
+            <h3>Create account</h3>
+            <p class="muted">Start your AI productivity journey in minutes.</p>
+            <input placeholder="Full name" />
+            <input placeholder="Email" />
+            <input placeholder="Password" type="password" />
+            <button class="gradient" data-nav="dashboard">Create account</button>
+            <button class="link" data-auth-target="signin">Already have an account?</button>
+          </article>
+          <article class="card auth-card hidden" data-auth="forgot">
+            <h3>Reset password</h3>
+            <p class="muted">We’ll send you a secure recovery link.</p>
+            <input placeholder="Email" />
+            <button class="gradient">Send reset link</button>
+            <button class="link" data-auth-target="signin">Back to sign in</button>
+          </article>
         </div>
-    </div>
-</body>
+      </section>
+
+      <section id="app" class="page app-shell">
+        <aside class="sidebar" id="sidebar">
+          <div class="brand compact"><span class="brand-dot"></span><strong>LO</strong></div>
+          <button class="ghost full" id="collapseBtn"><i class="ri-menu-2-line"></i> Collapse</button>
+          <nav>
+            <button class="nav-item active" data-tab="dashboard"><i class="ri-dashboard-line"></i> Dashboard</button>
+            <button class="nav-item" data-tab="chat"><i class="ri-robot-2-line"></i> AI Chat</button>
+            <button class="nav-item" data-tab="workspaces"><i class="ri-briefcase-3-line"></i> Workspaces</button>
+            <button class="nav-item" data-tab="notes"><i class="ri-sticky-note-line"></i> Notes</button>
+            <button class="nav-item" data-tab="tasks"><i class="ri-task-line"></i> Tasks</button>
+            <button class="nav-item" data-tab="files"><i class="ri-file-upload-line"></i> Files</button>
+            <button class="nav-item" data-tab="study"><i class="ri-graduation-cap-line"></i> Study Planner</button>
+            <button class="nav-item" data-tab="history"><i class="ri-history-line"></i> History</button>
+            <button class="nav-item" data-tab="analytics"><i class="ri-bar-chart-2-line"></i> Analytics</button>
+            <button class="nav-item" data-tab="pricing"><i class="ri-vip-crown-line"></i> Subscription</button>
+            <button class="nav-item" data-tab="settings"><i class="ri-settings-3-line"></i> Settings</button>
+          </nav>
+        </aside>
+
+        <div class="workspace">
+          <header class="top-nav">
+            <div class="search"><i class="ri-search-line"></i><input placeholder="Search chats, notes, files, and tasks" /></div>
+            <div class="top-actions">
+              <button class="ghost"><i class="ri-command-line"></i> Command ⌘K</button>
+              <button class="ghost"><i class="ri-notification-3-line"></i></button>
+              <button class="ghost" id="themeToggle"><i class="ri-moon-clear-line"></i></button>
+              <button class="gradient"><i class="ri-add-line"></i> Quick Action</button>
+            </div>
+          </header>
+
+          <section class="tabs">
+            <article class="tab active" data-tab-panel="dashboard">
+              <div class="hero-banner card">
+                <h2>Good evening, Amina 👋</h2>
+                <p>Here’s your AI-assisted plan to stay in flow today.</p>
+                <div class="chips"><span>Summarize research</span><span>Plan exam sprint</span><span>Finish launch checklist</span></div>
+              </div>
+              <div class="five-col stats">
+                <article class="card"><p>Total chats</p><strong>148</strong></article>
+                <article class="card"><p>Files analyzed</p><strong>73</strong></article>
+                <article class="card"><p>Notes created</p><strong>219</strong></article>
+                <article class="card"><p>Tasks completed</p><strong>84%</strong></article>
+                <article class="card"><p>AI usage</p><strong>61k tokens</strong></article>
+              </div>
+              <div class="three-col">
+                <article class="card"><h3>Quick Create</h3><ul><li>New Chat</li><li>Upload File</li><li>Create Study Plan</li><li>Add Task</li><li>Generate Notes</li></ul></article>
+                <article class="card"><h3>Recent Activity</h3><ul><li>Generated exam prep timeline</li><li>Converted notes to flashcards</li><li>Summarized 3 files</li><li>Completed sprint review board</li></ul></article>
+                <article class="card"><h3>Upcoming Deadlines</h3><ul><li>Math mock exam — Apr 7</li><li>Client proposal — Apr 9</li><li>Biology chapter quiz — Apr 10</li></ul></article>
+              </div>
+            </article>
+
+            <article class="tab" data-tab-panel="chat">
+              <div class="chat-layout">
+                <aside class="card chat-side"><h3>Conversations</h3><button class="ghost full">+ New Chat</button><ul><li class="active">Launch plan refinement</li><li>Physics notes summary</li><li>Weekly life review</li></ul></aside>
+                <div class="card chat-main">
+                  <div class="msg ai">I built a 7-day execution map. Want it as calendar tasks too?</div>
+                  <div class="msg user">Yes, and split each day into 2-hour deep work blocks.</div>
+                  <div class="msg ai">Done. I also generated a checklist and reminders.</div>
+                  <div class="composer"><button class="ghost"><i class="ri-attachment-2"></i></button><input placeholder="Ask Life Operator AI anything..." /><button class="ghost"><i class="ri-mic-line"></i></button><button class="gradient">Send</button></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="tab" data-tab-panel="workspaces"><div class="three-col"><article class="card"><h3>Founder OS</h3><p>Launch planning, investor notes, task rituals.</p></article><article class="card"><h3>Exam Sprint</h3><p>Chemistry + Math revision, flashcards, tests.</p></article><article class="card"><h3>Creator Pipeline</h3><p>Scripts, publishing calendar, content research.</p></article></div></article>
+            <article class="tab" data-tab-panel="notes"><div class="split"><aside class="card"><h3>Folders</h3><ul><li>All Notes</li><li>Pinned</li><li>Study</li><li>Projects</li></ul></aside><article class="card"><h3>AI Notes Editor</h3><p class="muted">Design sprint retrospective and action synthesis.</p><textarea>Highlights\n- Improved weekly review cadence\n- AI-generated briefs reduced prep time by 42%\n- Next: automate risk log summaries</textarea></article></div></article>
+            <article class="tab" data-tab-panel="tasks"><div class="kanban"><article class="card"><h3>Todo</h3><p>8 tasks</p></article><article class="card"><h3>In Progress</h3><p>4 tasks</p></article><article class="card"><h3>Review</h3><p>3 tasks</p></article><article class="card"><h3>Completed</h3><p>19 tasks</p></article></div></article>
+            <article class="tab" data-tab-panel="files"><div class="two-col"><article class="card"><h3>Upload & Analyze</h3><div class="dropzone">Drop PDF, DOCX, IMG here</div><p class="muted">Progress: 74% uploaded</p></article><article class="card"><h3>Extracted Insights</h3><ul><li>24 key concepts captured</li><li>Auto-generated 10 MCQs</li><li>Created revision plan draft</li></ul></article></div></article>
+            <article class="tab" data-tab-panel="study"><div class="three-col"><article class="card"><h3>Exam Countdown</h3><strong>23 days</strong></article><article class="card"><h3>Today’s Targets</h3><p>Calculus derivatives, Bio chapter 6, Mock test review</p></article><article class="card"><h3>Weak Topics</h3><p>Electromagnetism, Organic chemistry naming</p></article></div></article>
+            <article class="tab" data-tab-panel="history"><article class="card"><h3>Conversation History</h3><ul><li>Apr 3 — Generated launch execution system</li><li>Apr 2 — Converted class notes to flashcards</li><li>Apr 1 — Weekly planning with AI insights</li></ul></article></article>
+            <article class="tab" data-tab-panel="analytics"><div class="two-col"><article class="card"><h3>Usage Trend</h3><div class="bars"><span style="height: 35%"></span><span style="height: 50%"></span><span style="height: 70%"></span><span style="height: 60%"></span><span style="height: 85%"></span><span style="height: 75%"></span></div></article><article class="card"><h3>Productivity Score</h3><div class="ring">92</div><p>Weekly momentum is strong. Keep consistency above 80.</p></article></div></article>
+            <article class="tab" data-tab-panel="pricing"><div class="three-col"><article class="card"><h3>Free</h3><p>$0/mo</p><ul><li>20 chats/day</li><li>Basic notes</li></ul></article><article class="card featured"><h3>Pro</h3><p>$29/mo</p><ul><li>Unlimited chats</li><li>File analysis + study planner</li><li>Advanced analytics</li></ul></article><article class="card"><h3>Premium Team</h3><p>$99/mo</p><ul><li>Team workspaces</li><li>Governance + exports</li></ul></article></div></article>
+            <article class="tab" data-tab-panel="settings"><div class="two-col"><article class="card"><h3>Profile Settings</h3><input value="Amina Noor" /><input value="amina@lifeoperator.ai" /><button class="gradient">Save Changes</button></article><article class="card"><h3>Preferences</h3><label><input type="checkbox" checked /> Email reminders</label><label><input type="checkbox" checked /> Smart AI suggestions</label><label><input type="checkbox" /> Product updates</label></article></div></article>
+          </section>
+        </div>
+      </section>
+
+      <section id="notfound" class="page">
+        <article class="card center">
+          <h2>404 — Page not found</h2>
+          <p class="muted">Looks like this route drifted into deep space.</p>
+          <button class="gradient" data-nav="landing">Return Home</button>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
